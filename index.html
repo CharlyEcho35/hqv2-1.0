@@ -3,7 +3,7 @@
 <html lang="fr"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>HQv2.5</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=IM+Fell+English:ital@0;1&family=MedievalSharp&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&display=swap">
 <style>
 :root{--bg:#f3e6c8;--card:#fbf3df;--ink:#2b1d0e;--mut:#6d5638;--acc:#8b2020;--gold:#8a5a0a;--line:#c9b283;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17100a;--card:#241a0f;--ink:#ead9b0;--mut:#a08a62;--acc:#e06060;--gold:#e0a93a;--line:#4a3820;color-scheme:dark}}
@@ -43,9 +43,77 @@ button{cursor:pointer}button:active{background:var(--line)}button:disabled{opaci
 .sub{border-top:1px dashed var(--line);margin-top:6px;padding-top:4px}
 .tag{display:inline-block;border:1px solid var(--line);border-radius:10px;padding:1px 8px;margin:2px;font-size:13px}
 [hidden]{display:none!important}#pop{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:20;display:grid;place-items:center;padding:16px}#pop>div{background:var(--card);border:2px solid var(--gold);border-radius:8px;max-width:520px;max-height:80vh;overflow:auto;padding:14px}small{color:var(--mut)}details{margin-top:6px}summary{cursor:pointer;color:var(--gold)}
+/* ===== Habillages ===== */
+html[data-skin]{--tx:none}
+/* --- Parchemin (Compendium) --- */
+html[data-skin=parch]{--bg:#e9d6a6;--card:#f4e6bd;--ink:#2a1a0c;--mut:#6b4a28;--acc:#7a1d17;--gold:#7a1d17;--line:#a98a52}
+html[data-skin=parch] body{background:#2b1d12 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' seed='8'/><feColorMatrix values='0 0 0 0 .1 0 0 0 0 .06 0 0 0 0 .02 0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");font-family:"EB Garamond",Georgia,serif;font-size:18px}
+html[data-skin=parch] main{background:#eed9a2 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.55' numOctaves='4' seed='3'/><feColorMatrix values='0 0 0 0 .55 0 0 0 0 .38 0 0 0 0 .15 0 0 0 .32 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");box-shadow:inset 0 0 70px 14px rgba(120,70,20,.55),0 0 0 3px #5a3a1c,0 10px 40px #000;border-radius:4px;margin-top:10px;margin-bottom:20px;padding:16px 16px 44px;position:relative}
+html[data-skin=parch] main::after{content:"";position:absolute;left:0;right:0;bottom:0;height:12px;background:linear-gradient(90deg,transparent,#7a1d17 12%,#7a1d17 88%,transparent)}
+html[data-skin=parch] header{background:#3a2616;border-bottom:3px solid #7a1d17;color:#f1dfae}
+html[data-skin=parch] header *{color:inherit}
+html[data-skin=parch] h1{color:#e9c777;font-family:Cinzel,serif}
+html[data-skin=parch] section{background:transparent;border:2px solid #5a3a1c;border-radius:3px 9px 4px 10px/9px 4px 10px 3px;box-shadow:inset 0 0 22px rgba(120,70,20,.35)}
+html[data-skin=parch] h2{font:800 17px Cinzel,serif;color:#7a1d17;text-transform:none;letter-spacing:.01em;border-bottom:2px solid #7a1d17;padding-bottom:3px;margin-bottom:10px}
+html[data-skin=parch] .hero{background:transparent;border:2px solid #5a3a1c;box-shadow:inset 0 0 30px rgba(120,70,20,.4)}
+html[data-skin=parch] .hero h1.big{color:#7a1d17;text-shadow:0 1px 0 #f4e6bd}
+html[data-skin=parch] .hero h1.big span{color:#3a2616}
+html[data-skin=parch] button,html[data-skin=parch] select,html[data-skin=parch] input{background:#f4e6bd;border:1.5px solid #5a3a1c;color:#2a1a0c}
+html[data-skin=parch] .pri{background:#7a1d17;color:#fbeed0;border-color:#4d100c}
+html[data-skin=parch] .log>div{background:rgba(255,248,225,.55);border-left:5px solid #7a1d17}
+html[data-skin=parch] .log h3{color:#7a1d17}
+html[data-skin=parch] label.cc{background:rgba(255,248,225,.5);border-color:#5a3a1c}
+html[data-skin=parch] #pop>div{background:#f1dfae;border:3px double #5a3a1c;color:#2a1a0c}
+html[data-skin=parch] .q{color:#5a2a14}
+/* --- Vieux N&B (fiches classiques) --- */
+html[data-skin=bw]{--bg:#fff;--card:#fff;--ink:#000;--mut:#444;--acc:#000;--gold:#000;--line:#000}
+html[data-skin=bw] body{background:#fff;font-family:"IM Fell English",Georgia,serif;font-size:17px;color:#000}
+html[data-skin=bw] header{background:#fff;border-bottom:4px double #000}
+html[data-skin=bw] h1{font-family:"MedievalSharp",Cinzel,serif;color:#000;font-size:17px}
+html[data-skin=bw] main{background:#fff}
+html[data-skin=bw] section{border:3px solid #000;border-radius:3px 16px 5px 14px/14px 4px 16px 4px;background:#fff;box-shadow:3px 3px 0 #000;margin:16px 0;padding:14px 10px 10px;position:relative}
+html[data-skin=bw] h2{font:400 17px "MedievalSharp",Cinzel,serif;text-transform:none;letter-spacing:.02em;color:#000;background:#fff;border:2.5px solid #000;display:inline-block;padding:3px 26px;margin:-27px 0 10px 8px;border-radius:3px 18px 3px 18px;box-shadow:2px 2px 0 #000;position:relative;top:0}
+html[data-skin=bw] section>h2:first-child{margin-top:-28px}
+html[data-skin=bw] .hero{border:4px double #000;border-radius:4px;background:#fff;box-shadow:4px 4px 0 #000}
+html[data-skin=bw] .hero h1.big{font-family:"MedievalSharp",Cinzel,serif;color:#000;text-shadow:3px 3px 0 #bbb}
+html[data-skin=bw] .hero h1.big span{color:#000}
+html[data-skin=bw] .hero .sw,html[data-skin=bw] .hero .by{color:#000}
+html[data-skin=bw] .hero .rule{background:#000;height:3px}
+html[data-skin=bw] button,html[data-skin=bw] select,html[data-skin=bw] input{background:#fff;color:#000;border:2px solid #000;border-radius:3px 8px 3px 8px;box-shadow:2px 2px 0 #000}
+html[data-skin=bw] button:active{box-shadow:none;transform:translate(2px,2px);background:#ddd}
+html[data-skin=bw] .pri{background:#000;color:#fff}
+html[data-skin=bw] .log>div{background:repeating-linear-gradient(#fff 0 25px,#9a9a9a 25px 26px);border:2px solid #000;border-left:8px solid #000;border-radius:2px}
+html[data-skin=bw] .log h3{font-family:"MedievalSharp",serif;color:#000;font-size:15px;border-bottom:2px solid #000}
+html[data-skin=bw] .log p{line-height:26px;margin:0}
+html[data-skin=bw] .q{color:#222}
+html[data-skin=bw] .c{border:2px solid #000;border-radius:0;color:#000}
+html[data-skin=bw] .c.p{background:repeating-linear-gradient(45deg,#fff 0 3px,#000 3px 4px)}
+html[data-skin=bw] .c.cur{background:#000;color:#fff}
+html[data-skin=bw] .tag{border:2px solid #000;border-radius:3px}
+html[data-skin=bw] label.cc{border:2.5px solid #000;border-radius:3px 10px 3px 10px;background:#fff}
+html[data-skin=bw] label.cc:has(input:checked){box-shadow:3px 3px 0 #000;background:#eee}
+html[data-skin=bw] #pop>div{background:#fff;border:4px double #000;border-radius:3px;color:#000}
+/* --- Hasbro (éditions récentes) --- */
+html[data-skin=hasbro]{--bg:#16120e;--card:#251d16;--ink:#ecdfc2;--mut:#ab9a78;--acc:#b3281f;--gold:#d8ac4e;--line:#5c4527;color-scheme:dark}
+html[data-skin=hasbro] body{background:#100d0a url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' seed='5'/><feColorMatrix values='0 0 0 0 .6 0 0 0 0 .5 0 0 0 0 .35 0 0 0 .12 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");font-family:"Cormorant Garamond",Georgia,serif;font-size:18px}
+html[data-skin=hasbro] header{background:linear-gradient(#2c2218,#1b150f);border-bottom:2px solid var(--gold);box-shadow:0 2px 0 #000}
+html[data-skin=hasbro] section{background:linear-gradient(160deg,#2b2218,#1d1711);border:1px solid #000;border-radius:4px;box-shadow:inset 0 0 0 2px var(--line),inset 0 0 0 4px #000,0 4px 14px rgba(0,0,0,.6);padding:14px 14px 12px}
+html[data-skin=hasbro] h2{font:700 15px Cinzel,serif;color:var(--gold);text-align:center;letter-spacing:.14em;border-bottom:1px solid var(--line);padding-bottom:6px;margin-bottom:10px}
+html[data-skin=hasbro] h2::before{content:"⚜ ";color:var(--acc)}html[data-skin=hasbro] h2::after{content:" ⚜";color:var(--acc)}
+html[data-skin=hasbro] .hero{background:radial-gradient(ellipse at 50% 0%,rgba(216,172,78,.28),transparent 70%),#1d1711;border:2px solid var(--gold);box-shadow:inset 0 0 0 4px #000,inset 0 0 0 5px var(--line)}
+html[data-skin=hasbro] .hero h1.big{color:var(--gold);text-shadow:0 3px 0 #000,0 0 22px rgba(179,40,31,.5)}
+html[data-skin=hasbro] .hero h1.big span{color:#e5584c}
+html[data-skin=hasbro] button,html[data-skin=hasbro] select,html[data-skin=hasbro] input{background:linear-gradient(#3a2d20,#2a2018);border:1px solid var(--gold);border-radius:3px;color:var(--ink)}
+html[data-skin=hasbro] .pri{background:linear-gradient(#c93128,#8f1c15);border-color:var(--gold);color:#fff3d8;text-shadow:0 1px 0 #000}
+html[data-skin=hasbro] .log>div{background:rgba(0,0,0,.28);border-left:4px solid var(--acc);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+html[data-skin=hasbro] .log h3{color:var(--gold);letter-spacing:.06em}
+html[data-skin=hasbro] #pop>div{background:linear-gradient(160deg,#2b2218,#1d1711);border:2px solid var(--gold);box-shadow:inset 0 0 0 3px #000,0 0 30px #000}
+html[data-skin=hasbro] label.cc{background:rgba(0,0,0,.3);border-color:var(--line)}
+html[data-skin=hasbro] .c.cur{background:var(--acc)}
+#skbtn{font-size:14px}
 </style></head><body>
-<header><button onclick="scr(0)" style="float:right">Menu</button><button onclick="vOpen()" style="float:right;margin-right:6px">🏙 Ville</button><button id="mutebtn" onclick="sndMute()" style="float:right;margin-right:6px" title="Son">🔊</button><button id="musbtn" onclick="musToggle()" style="float:right;margin-right:6px" title="Musique">🎵</button><h1 id="h1">HeroQuest v2.5</h1><span style="font-size:.7em;opacity:.55;font-style:italic">par CharlyEcho35</span> <small id="hs"></small></header>
-<div id="audbar" style="position:fixed;top:calc(8px + env(safe-area-inset-top,0px));right:10px;z-index:9;display:flex;gap:6px"><button class="mubtn" onclick="musToggle()" title="Musique">🎵</button><button class="snbtn" onclick="sndMute()" title="Son">🔊</button></div>
+<header><button onclick="scr(0)" style="float:right">Menu</button><button onclick="skinPop()" style="float:right;margin-right:6px" title="Habillage">🎨</button><button onclick="vOpen()" style="float:right;margin-right:6px">🏙 Ville</button><button id="mutebtn" onclick="sndMute()" style="float:right;margin-right:6px" title="Son">🔊</button><button id="musbtn" onclick="musToggle()" style="float:right;margin-right:6px" title="Musique">🎵</button><h1 id="h1">HeroQuest v2.5</h1><span style="font-size:.7em;opacity:.55;font-style:italic">par CharlyEcho35</span> <small id="hs"></small></header>
+<div id="audbar" style="position:fixed;top:calc(8px + env(safe-area-inset-top,0px));right:10px;z-index:9;display:flex;gap:6px"><button onclick="skinPop()" title="Habillage">🎨</button><button class="mubtn" onclick="musToggle()" title="Musique">🎵</button><button class="snbtn" onclick="sndMute()" title="Son">🔊</button></div>
 <div id="pop" hidden><div><div id="pb"></div><button class="pri" onclick="document.getElementById('pop').hidden=1">OK</button></div></div>
 <main>
 <div id="s0"><div class="hero"><div class="sw">⚔ ❖ ⚔</div><h1 class="big">Hero<span>Quest</span> v2.5</h1><div class="by">par Gravaillon</div><div class="by" style="font-size:.8em;opacity:.7;margin-top:2px">adaptation numérique par CharlyEcho35</div><div class="rule"></div></div><section><h2>Choisis ta campagne</h2><div id="cl"></div><div class="row"><button id="m0b" onclick="m0(null)" hidden>‹ Retour</button><button class="pri" id="vc" onclick="pickC()" hidden>Valider</button></div><div class="row"><button class="pri" id="rp0" onclick="scr(3)" hidden>▶ Reprendre la partie en cours</button></div></section></div>
@@ -150,6 +218,10 @@ function mark(h){if(!S||!S.pm)return;let t=h;const L=[],A=mall();for(const n of 
 const lab=e=>e.t=="h"?"🧙 "+e.n:e.t=="m"?"👹 "+e.n:"🤝 "+merTxt();
 function newTurn(){S.tn++;S.tg={};S.ord=sh([...(S.q==46&&S.kv&&S.kv.act?S.kv.act:S.h).map(n=>({t:"h",n})),...Object.keys(S.pm).filter(k=>S.pm[k]).map(n=>({t:"m",n})),...(S.ally?[{t:"a",n:"Alliés"}]:[])]);S.oi=0;R();pop("Tour "+S.tn+" · ordre de jeu","<ol>"+S.ord.map(e=>"<li>"+lab(e)+"</li>").join("")+"</ol>");stRoll()}
 function stRoll(){if(S.q!=221||!S.ord||S.oi>=S.ord.length)return;const x=S.ord[S.oi],q=Q21();if(x.t!="h"||x.n!=q.h||q.rt==S.tn)return;q.rt=S.tn;const r=d6();if(r<=3)return;if(r<=5){etA();return}log("Début du tour de "+q.h,"<p class=q>« L’emprise de l’anneau s’accentue. Il semble qu’il vous dévore l’esprit. »</p><p><b>"+q.h+"</b> perd 1 🟢 (point d’esprit).</p>")}
+const SKINS=[["parch","Parchemin"],["bw","HeroQuest, Old school"],["hasbro","Grimoire sombre"],["","Sobre"]];
+function skinSet(k){try{k?document.documentElement.setAttribute("data-skin",k):document.documentElement.removeAttribute("data-skin")}catch(e){}try{localStorage.setItem("hqskin",k)}catch(e){}}
+function skinPop(){const c=document.documentElement.getAttribute("data-skin")||"";pop("🎨 Habillage",SKINS.map(s=>"<p><button "+(s[0]==c?"class=pri ":"")+"onclick=\"skinSet('"+s[0]+"');skinPop()\" style='width:100%;text-align:left'><b>"+s[1]+"</b></button></p>").join(""))}
+try{const v=localStorage.getItem("hqskin");skinSet(v===null?"parch":v)}catch(e){skinSet("parch")}
 function zoomI(s){pop("Carte","<img src='"+s+"' alt='' style='width:100%;border-radius:8px'>")}
 function nxt(){if(!S.ord)return;S.oi++;if(S.oi>=S.ord.length){endT();return}stRoll();R()}
 function endT(){fin();S.ord=null;R()}
